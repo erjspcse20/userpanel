@@ -1,0 +1,400 @@
+@import 'common.less';
+
+/*
+ * Header Starts Here
+ */
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+.main-page {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.top-header {
+  background: #1e254a;
+  height: 60px;
+}
+
+.brands {
+  float: left;
+  color: #eee;
+  text-shadow: #777777 0 1px 0;
+  display: block;
+  font-size: 20px;
+  font-weight: 200;
+  padding: 10px 20px;
+  margin: 10px;
+  text-decoration: none;
+  outline: none;
+}
+
+.dashboard-nav {
+  float: right;
+  padding-top: 12px;
+  margin: 10px;
+}
+
+.dashboard-nav ul li {
+  float: left;
+}
+
+.dashboard-nav ul li a, .dashboard-nav ul li .logout {
+  color: #eee;
+  text-shadow: #ccc 0 0 0;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.sub-header {
+  display: none;
+}
+
+/* Loader Starts */
+.loader-progressbar {
+  position: fixed;
+  top: 60px;
+  z-index: 99;
+  height: 3px;
+  width: 100%;
+}
+
+.loader-progressbar:before {
+  -webkit-animation: progress 1s forwards;
+  -moz-animation: progress 1s forwards;
+  -ms-animation: progress 1s forwards;
+  animation: progress 1s forwards;
+  -webkit-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  width: 1%;
+  position: absolute;
+  right: 50%;
+  top: 0;
+  content: "";
+  background: #fddb07;
+  height: 3px;
+}
+
+.loader-progressbar:after {
+  -webkit-animation: progress 1s forwards;
+  -moz-animation: progress 1s forwards;
+  -ms-animation: progress 1s forwards;
+  animation: progress 1s forwards;
+  -webkit-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  width: 1%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  content: "";
+  background: #fddb07;
+  height: 3px;
+}
+
+@-webkit-keyframes progress {
+  from {
+  }
+  to {
+    width: 50%
+  }
+}
+
+@-moz-keyframes progress {
+  from {
+  }
+  to {
+    width: 50%
+  }
+}
+
+@-ms-keyframes progress {
+  from {
+  }
+  to {
+    width: 50%
+  }
+}
+
+@keyframes progress {
+  from {
+  }
+  to {
+    width: 50%
+  }
+}
+
+@-webkit-keyframes dot-keyframes {
+  0% {
+    opacity: .4;
+    transform: scale(1, 1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2, 1.2);
+  }
+
+  100% {
+    opacity: .4;
+    transform: scale(1, 1);
+  }
+}
+
+@-moz-keyframes dot-keyframes {
+  0% {
+    opacity: .4;
+    transform: scale(1, 1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2, 1.2);
+  }
+
+  100% {
+    opacity: .4;
+    transform: scale(1, 1);
+  }
+}
+
+@-ms-keyframes dot-keyframes {
+  0% {
+    opacity: .4;
+    transform: scale(1, 1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2, 1.2);
+  }
+
+  100% {
+    opacity: .4;
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes dot-keyframes {
+  0% {
+    opacity: .4;
+    transform: scale(1, 1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2, 1.2);
+  }
+
+  100% {
+    opacity: .4;
+    transform: scale(1, 1);
+  }
+}
+
+.loading-dots {
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+  &--dot {
+    animation: dot-keyframes 1.5s infinite ease-in-out;
+    background-color: #fff;
+    border-radius: 10px;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin-right: 5px;
+    &:nth-child(2) {
+      animation-delay: .5s;
+    }
+    &:nth-child(3) {
+      animation-delay: 1s;
+    }
+  }
+}
+
+.loader-blue {
+  .loading-dots--dot {
+    background-color: #1d2549;
+  }
+}
+
+/* Loader Ends */
+
+//Navigation bar
+
+.container {
+  min-height: 700px;
+}
+
+.sidebar {
+  float: left;
+  width: 20%;
+  height: 100%;
+}
+
+.content {
+  float: right;
+  width: 80%;
+  height: 100%;
+}
+
+.dashboard-link {
+  float: left;
+  width: 100%;
+  background: #1e254a;
+  height: 100%;
+  margin-right: 5%;
+  padding: 20px;
+}
+
+.main-content {
+  float: left;
+  width: 70%;
+  padding: 0 5%;
+}
+
+.dashboard-link ul {
+  font-size: 16px;
+}
+
+.dashboard-link li {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.dashboard-link li a {
+  font-size: 16px;
+  line-height: 1;
+  outline: none;
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+}
+
+.dashboard-link li a:hover {
+  color: #fff;
+}
+
+.login-link {
+  position: relative;
+  .loading-dots {
+    margin-top: 0px;
+  }
+}
+
+.login-link-disabled {
+  background: @submit-btn-disabled;
+  color: @white;
+  border: 1px solid transparent;
+  cursor: not-allowed;
+}
+
+.logout {
+  cursor: pointer;
+}
+
+.crud-form {
+  max-width: 300px;
+}
+
+.crud-title {
+  display: block;
+  font-size: 22px;
+  line-height: 24px;
+  color: #333;
+  padding: 20px 0;
+}
+
+.login-form, .login-otp-form {
+  max-width: 300px;
+}
+
+.forget-pwd {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #379aff;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+}
+
+.forget-pwd:hover {
+  color: #1B82EC;
+}
+
+.modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 4px;
+  z-index: 999;
+  width: 90%;
+  max-width: 400px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.overlay-hidden {
+  width: 0;
+}
+
+.confirm-box-cntr {
+  h2 {
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0.5px;
+    color: #777777;
+    padding: 40px 0;
+  }
+  .confirm-box-wrapper {
+    border-top: 1px solid #c8c7c3;
+    div {
+      float: left;
+      width: 50%;
+      font-size: 14px;
+      line-height: 1;
+      color: #838383;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 20px 0;
+      cursor: pointer;
+    }
+    div + div {
+      border-left: 1px solid #c8c7c3;
+      cursor: pointer;
+    }
+  }
+}
